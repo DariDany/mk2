@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Ordered Books</h1>
+    <ul class="list-group">
+        {% for book in books %}
+            <li class="list-group-item">{{ book.title }}</li>
+        {% empty %}
+            <li class="list-group-item">No books available.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

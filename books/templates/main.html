@@ -1,0 +1,18 @@
+<!-- books/templates/main.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipes 2023</title>
+</head>
+<body>
+    <h2><a href="admin">admin panel</a></h2>
+    <h1>Recipes from 2023</h1>
+    <ul>
+        {% for recipe in recipes %}
+            <li>
+                <a href="{% url 'recipe_detail' recipe.id %}">{{ recipe.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
